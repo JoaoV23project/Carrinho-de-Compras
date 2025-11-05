@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compras online</title>
+    <link rel="shortcut icon" href="src/images/icone.png" type="image/png">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="src/js/script.js"></script>
+</head>
+<body onload="produtos(20)">
+    <nav>
+        <img src="src/images/icone_medio.png" width="100px">
+        <label for="itens">Quantidade de itens:</label>
+        <h3 id="itens" style="display: inline;"></h3>
+        <label for="total">Valor total:</label>
+        <h3 id="total" style="display: inline;"></h3>
+        <input type="button" value="Realizar compra" onclick="cep()">
+    </nav>
+    <div class="cep" id="cep">
+        <label for="dado">Insira o CEP onde deseja receber sua(s) compra(s):</label>
+        <input type="text" name="dado" id="dado"><br><br>
+        <label for="numero">Insira o número da residência:</label>
+        <input type="text" name="numero" id="numero"><br><br>
+        <input type="button" value="Buscar endereço" onclick="mostrarCEP()">
+        <h3 id="resultado"></h3>
+        <h3 id="complemento">Obrigado por escolher compar no nosso site! Sua encomenta chegará em breve!</h3>
+        <input type="button" value="Voltar" onclick="ocultarCEP()">
+        </div>
+    </div>
+    <div class="carrinho">
+        <div class="produto">
+            <img src="" id="image0" class="image">
+            <h3 id="nome0" class="nome"></h3>
+            <h3 id="descri0" class="descri"></h3>
+            <h3 id="price0" class="price"></h3>
+            <input type="button" value="Adicionar ao carrinho" class="buttonCarrinho" onclick="adicionar(0)">
+        </div>
+        <div class="produto">
+            <img src="" id="image1" class="image">
+            <h3 id="nome1" class="nome"></h3>
+            <h3 id="descri1" class="descri"></h3>
+            <h3 id="price1" class="price"></h3>
+            <input type="button" value="Adicionar ao carrinho" class="buttonCarrinho" onclick="adicionar(1)">
+        </div>
+        <div class="produto">
+            <img src="" id="image2" class="image">
+            <h3 id="nome2" class="nome"></h3>
+            <h3 id="descri2" class="descri"></h3>
+            <h3 id="price2" class="price"></h3>
+            <input type="button" value="Adicionar ao carrinho" class="buttonCarrinho" onclick="adicionar(2)">
+        </div>
+        <div class="produto">
+            <img src="" id="image3" class="image">
+            <h3 id="nome3" class="nome"></h3>
+            <h3 id="descri3" class="descri"></h3>
+            <h3 id="price3" class="price"></h3>
+            <input type="button" value="Adicionar ao carrinho" class="buttonCarrinho" onclick="adicionar(3)">
+        </div>
+        <div class="produto">
+            <img src="" id="image4" class="image">
+            <h3 id="nome4" class="nome"></h3>
+            <h3 id="descri4" class="descri"></h3>
+            <h3 id="price4" class="price"></h3>
+            <input type="button" value="Adicionar ao carrinho" class="buttonCarrinho" onclick="adicionar(4)">
+        </div>
+        <div class="produto">
+            <img src="" id="image5" class="image">
+            <h3 id="nome5" class="nome"></h3>
+            <h3 id="descri5" class="descri"></h3>
+            <h3 id="price5" class="price"></h3>
+            <input type="button" value="Adicionar ao carrinho" class="buttonCarrinho" onclick="adicionar(5)">
+        </div>
+        <div class="produto">
+            <img src="" id="image6" class="image">
+            <h3 id="nome6" class="nome"></h3>
+            <h3 id="descri6" class="descri"></h3>
+            <h3 id="price6" class="price"></h3>
+            <input type="button" value="Adicionar ao carrinho" class="buttonCarrinho" onclick="adicionar(6)">
+        </div>
+        <div class="produto">
+            <img src="" id="image7" class="image">
+            <h3 id="nome7" class="nome"></h3>
+            <h3 id="descri7" class="descri"></h3>
+            <h3 id="price7" class="price"></h3>
+            <input type="button" value="Adicionar ao carrinho" class="buttonCarrinho" onclick="adicionar(7)">
+        </div>
+        <div class="produto">
+            <img src="" id="image8" class="image">
+            <h3 id="nome8" class="nome"></h3>
+            <h3 id="descri8" class="descri"></h3>
+            <h3 id="price8" class="price"></h3>
+            <input type="button" value="Adicionar ao carrinho" class="buttonCarrinho" onclick="adicionar(8)">
+        </div>
+        <div class="produto">
+            <img src="" id="image9" class="image">
+            <h3 id="nome9" class="nome"></h3>
+            <h3 id="descri9" class="descri"></h3>
+            <h3 id="price9" class="price"></h3>
+            <input type="button" value="Adicionar ao carrinho" class="buttonCarrinho" onclick="adicionar(9)">
+        </div>
+        <div class="produto">
+            <img src="" alt="" id="image10" class="image">
+            <h3 id="nome10" class="nome"></h3>
+            <h3 id="descri10" class="descri"></h3>
+            <h3 id="price10" class="price"></h3>
+            <input type="button" value="Adicionar ao carrinho" class="buttonCarrinho" onclick="adicionar(10)">
+        </div>
+        <div class="produto">
+            <img src="" alt="" id="image11" class="image">
+            <h3 id="nome11" class="nome"></h3>
+            <h3 id="descri11" class="descri"></h3>
+            <h3 id="price11" class="price"></h3>
+            <input type="button" value="Adicionar ao carrinho" class="buttonCarrinho" onclick="adicionar(11)">
+        </div>
+        <div class="produto">
+            <img src="" alt="" id="image12" class="image">
+            <h3 id="nome12" class="nome"></h3>
+            <h3 id="descri12" class="descri"></h3>
+            <h3 id="price12" class="price"></h3>
+            <input type="button" value="Adicionar ao carrinho" class="buttonCarrinho" onclick="adicionar(12)">
+        </div>
+        <div class="produto">
+            <img src="" alt="" id="image13" class="image">
+            <h3 id="nome13" class="nome"></h3>
+            <h3 id="descri13" class="descri"></h3>
+            <h3 id="price13" class="price"></h3>
+            <input type="button" value="Adicionar ao carrinho" class="buttonCarrinho" onclick="adicionar(13)">
+        </div>
+        <div class="produto">
+            <img src="" alt="" id="image14" class="image">
+            <h3 id="nome14" class="nome"></h3>
+            <h3 id="descri14" class="descri"></h3>
+            <h3 id="price14" class="price"></h3>
+            <input type="button" value="Adicionar ao carrinho" class="buttonCarrinho" onclick="adicionar(14)">
+        </div>
+        <div class="produto">
+            <img src="" alt="" id="image15" class="image">
+            <h3 id="nome15" class="nome"></h3>
+            <h3 id="descri15" class="descri"></h3>
+            <h3 id="price15" class="price"></h3>
+            <input type="button" value="Adicionar ao carrinho" class="buttonCarrinho" onclick="adicionar(15)">
+        </div>
+        <div class="produto">
+            <img src="" alt="" id="image16" class="image">
+            <h3 id="nome16" class="nome"></h3>
+            <h3 id="descri16" class="descri"></h3>
+            <h3 id="price16" class="price"></h3>
+            <input type="button" value="Adicionar ao carrinho" class="buttonCarrinho" onclick="adicionar(16)">
+        </div>
+        <div class="produto">
+            <img src="" alt="" id="image17" class="image">
+            <h3 id="nome17" class="nome"></h3>
+            <h3 id="descri17" class="descri"></h3>
+            <h3 id="price17" class="price"></h3>
+            <input type="button" value="Adicionar ao carrinho" class="buttonCarrinho" onclick="adicionar(17)">
+        </div>
+        <div class="produto">
+            <img src="" alt="" id="image18" class="image">
+            <h3 id="nome18" class="nome"></h3>
+            <h3 id="descri18" class="descri"></h3>
+            <h3 id="price18" class="price"></h3>
+            <input type="button" value="Adicionar ao carrinho" class="buttonCarrinho" onclick="adicionar(18)">
+        </div>
+        <div class="produto">
+            <img src="" alt="" id="image19" class="image">
+            <h3 id="nome19" class="nome"></h3>
+            <h3 id="descri19" class="descri"></h3>
+            <h3 id="price19" class="price"></h3>
+            <input type="button" value="Adicionar ao carrinho" class="buttonCarrinho" onclick="adicionar(19)">
+        </div>
+    </div>
+</body>
+</html>
