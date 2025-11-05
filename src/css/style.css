@@ -21,6 +21,13 @@ nav{
     height: auto;
     flex: 1;
     text-align: center justify;
+    transition: all 1000ms;
+}
+.produto:hover{
+    cursor: pointer;
+}
+.produto:active{
+    background-color: #7d7e6c;
 }
 .image{
 
@@ -39,6 +46,7 @@ nav{
     font-size: 25px;
 }
 .descri{
+    display: none;
     position: relative;
     left: 50%;
     transform: translate(-50%);
@@ -63,19 +71,30 @@ nav{
 .buttonCarrinho:active{
     background-color: rgb(90, 243, 128);
 }
-.cep{
-    display: none;
-    text-align: center;
+#map{
+    visibility: hidden;
+    width: 98vw;
+    height: 80vh;
     z-index: 2;
     left: 50%;
-    top: 50%;
+    top: 55%;
     transform: translate(-50%, -50%);
-    border: 5px solid rgb(255, 0, 0);
-    width: 75vw;
-    height: 57vh;
     position: fixed;
-    background-color: rgb(255, 230, 230);
 }
-#resultado, #complemento{
-    display: none;
+#exibir, #ocultar, label{
+    position: relative;
+    top: 30%;
+    height: 30px;
+}
+#itens, #total{
+    position: relative;
+    top: 10%;
+}
+#ocultar{
+    visibility: hidden;
+}
+@media screen and (max-width: 700px){
+    #icone{
+        display: none;
+    }
 }
